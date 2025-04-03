@@ -1,0 +1,16 @@
+{
+    "ignore": [
+        "./git",
+        "node_modules",
+        "dist/",
+        "coverage"
+    ],
+    "watch": [
+        "src"
+    ],
+    "ext": "ts",
+    "exec": "ts-node src/app.ts",
+    "env": {
+        "NODE_ENV": "development"
+    }
+}
