@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { database } from "../mongodb/connection";
+import { database } from "../mongodb/connection.js";
 
 export const authRouter = Router();
 

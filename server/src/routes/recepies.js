@@ -1,5 +1,5 @@
 import express from 'express';
-import { RecepiesController } from '../controllers/recepies';
+import { RecepiesController } from '../controllers/recepies.js';
 
 
 export const recepiesRouter = express.Router()

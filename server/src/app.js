@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import { connection,database } from "./mongodb/connection";
-import { recepiesRouter } from './routes/recepies';
-import { gptRouter } from "./routes/openAI";
-import { authRouter } from "./routes/auth";
+import { connection,database } from "./mongodb/connection.js";
+import { recepiesRouter } from './routes/recepies.js';
+import { gptRouter } from "./routes/openAI.js";
+import { authRouter } from "./routes/auth.js";
 import * as dotenv from 'dotenv';
 
 const app = express();

@@ -1,5 +1,5 @@
 import { ObjectId } from "mongodb";
-import { database } from "../mongodb/connection";
+import { database } from "../mongodb/connection.js";
 
 export class RecepiesModel {
   static getAll = async (id) => {

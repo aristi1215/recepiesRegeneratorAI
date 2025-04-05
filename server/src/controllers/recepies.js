@@ -1,4 +1,4 @@
-import { RecepiesModel } from "../models/recepies";
+import { RecepiesModel } from "../models/recepies.js";
 
 export class RecepiesController {
   static getAll = async (req, res) => {
