@@ -1,6 +1,10 @@
 import { MongoClient, ServerApiVersion } from 'mongodb';
+import * as dotenv from 'dotenv'
 
-const client = new MongoClient(process.env.CONNECTION || 'mongodb+srv://juanarieda:juan1020302325@draw-ai-app.c8jei.mongodb.net/?retryWrites=true&w=majority&appName=draw-ai-app', {
+
+dotenv.config()
+
+const client = new MongoClient(process.env.CONNECTION, {
   serverApi: {
     version: ServerApiVersion.v1,
     strict: true,

@@ -1,5 +1,6 @@
 import { FormEvent, useEffect, useState } from "react";
 import { Close } from "../../../public/icons";
+import { RecepieCard } from "../shared/RecepieCard";
 
 export const CreateRecepie = ({
   showSignUpModal,
@@ -36,7 +37,7 @@ export const CreateRecepie = ({
     setLoadingRecepie(true);
 
     try {
-      const response = await fetch("http://localhost:3000/recepie/create", {
+      const response = await fetch("http://localhost:3000/api/v1/gpt/create", {
         method: "POST",
         body: JSON.stringify({ ingredients }),
         headers: {
@@ -116,30 +117,7 @@ export const CreateRecepie = ({
       </main>
       {titleRecepie && ingredientRecepie && stepsRecepie && (
         <aside className={`w-[50%] mr-10 items-center`}>
-          <div className="border p-4 rounded-xl min-h-[50%] relative flex flex-col gap-3">
-            <h2 className="title text-4xl text-[#6D1600]">{titleRecepie}</h2>
-
-            <h3 className="title text-2xl">Ingredients: </h3>
-            <ul className="list-none">
-              {ingredientRecepie.map((ingredient) => (
-                <li className="text">{ingredient}</li>
-              ))}
-            </ul>
-
-            <h3 className="title text-2xl">Steps</h3>
-            <ul className="list-none">
-              {stepsRecepie.map((step) => (
-                <li className="text">{step}</li>
-              ))}
-            </ul>
-
-            <button
-              onClick={() => setShowSignUpModal(!showSignUpModal)}
-              className="bg-[#6D1600] rounded-2xl w-fit text-white p-2 mt-3 cursor-pointer title"
-            >
-              Save recepie
-            </button>
-          </div>
+          {<RecepieCard ingredientRecepie={ingredients} titleRecepie={titleRecepie} setShowSignUpModal={setShowSignUpModal} showSignUpModal={showSignUpModal} stepsRecepie={stepsRecepie} />}
         </aside>
       )}
     </section>

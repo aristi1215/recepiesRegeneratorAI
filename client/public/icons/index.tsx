@@ -19,8 +19,8 @@ export const GoArrowDown = ({ size = 40, color, ...props }: Props) => (
 );
 
 
-export const LeftArrow = ({ size = 40, color, ...props }: Props) => (
-  <MdKeyboardArrowLeft {...props} size={size} color={color} />
+export const LeftArrow = ({ size = 40, color, className, ...props }: Props) => (
+  <MdKeyboardArrowLeft {...props} size={size} color={color} className={className} />
 );
 
 export const RightArrow = ({ size = 40, color, ...props }: Props) => (
