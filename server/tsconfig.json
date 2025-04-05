@@ -6,7 +6,7 @@
         "sourceMap": true,
         "outDir": "./build",
         "esModuleInterop": true,
-        "noEmit": true,
+        "noEmit": false,
         "allowImportingTsExtensions": true
     },
     "include": ["src/**/*"]
