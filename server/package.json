@@ -24,5 +24,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=8.0.0"
+  }
 }
