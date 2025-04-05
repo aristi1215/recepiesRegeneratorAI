@@ -2,7 +2,7 @@ import { ObjectId } from "mongodb";
 import { database } from "../mongodb/connection";
 
 export class RecepiesModel {
-  static getAll = async (id: ObjectId) => {
+  static getAll = async (id) => {
     try {
       const recepies = await database.collection("recepies").aggregate([
         { $match: { user_id: new ObjectId(id) } },

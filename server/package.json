@@ -18,15 +18,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/app.ts",
-    "build": "tsc"
+    "dev": "nodemon src/app.js",
+    "build": "npm install"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
-  "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=8.0.0"
-  }
+  "type": "module"
 }

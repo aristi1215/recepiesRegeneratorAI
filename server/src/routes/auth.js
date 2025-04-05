@@ -3,7 +3,7 @@ import { database } from "../mongodb/connection";
 
 export const authRouter = Router();
 
-authRouter.post("/register", async (req: any, res) => {
+authRouter.post("/register", async (req, res) => {
   const { userInfo } = req.body;
   try {
     const data = await database.collection("users").insertOne({ ...userInfo });
